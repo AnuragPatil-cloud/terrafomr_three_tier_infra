@@ -37,7 +37,7 @@ resource "aws_security_group" "rds_sg" {
 }
 
 # Create an RDS MySQL Instance
-resource "aws_db_instance" "ARP_db_instance" {
+resource "aws_db_instance" "arp_db_instance" {
   allocated_storage    = 20
   max_allocated_storage = 100
   engine               = "mysql"
@@ -51,7 +51,7 @@ resource "aws_db_instance" "ARP_db_instance" {
   db_subnet_group_name = aws_db_subnet_group.default.name
   skip_final_snapshot  = true
   tags = {
-    Name = "cbz-db-instance"
+    Name = "arp-db-instance"
   }
 }
 
