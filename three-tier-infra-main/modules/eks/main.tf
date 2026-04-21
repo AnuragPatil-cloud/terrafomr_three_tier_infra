@@ -3,7 +3,7 @@ resource "aws_iam_role" "eks_cluster_role" {
   name = "eks-cluster-role-1"
 
   assume_role_policy = jsonencode({
-    Version = "2026-03-17"
+    Version = "v1.0"
     Statement = [
       {
         Action = "sts:AssumeRole"
